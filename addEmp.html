@@ -32,7 +32,7 @@
     fetch("https://login-employeemanagement-3.onrender.com/depart/getDepart")
         .then(res => res.json())
         .then(res => {
-            const deptList = res.data;
+            const deptList = res.data || res;
             const select = document.getElementById("department");
 
             // clear old
